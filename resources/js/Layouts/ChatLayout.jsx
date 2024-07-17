@@ -26,7 +26,6 @@ const ChatLayout = ({children}) => {
     useEffect(() => {
         setSortedConversations(
             localConversations.sort((a, b) => {
-                console.log("localConversations (initial):", localConversations);
                 //logic to the block: the blocked users are shown on bottom and the blocked user are shown by admin only
                 if (a.blocked_at && b.blocked_at) {
                     return a.blocked_at > b.blocked_at ? 1 : -1;
